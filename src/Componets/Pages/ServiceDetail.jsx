@@ -31,7 +31,7 @@ export default function ServiceDetail() {
     },
     {
       id: 4,
-      image: "api.jpeg",
+      image: "api.png",
       heading: "API Development",
       slug: "api-development",
       para: "Streamline your business operations with custom API development. Our API solutions ensure smooth integration between various systems, enabling seamless communication between your applications and third-party services.",
