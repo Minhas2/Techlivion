@@ -14,8 +14,8 @@ export default function HomeHero() {
             </div>
 
             <h1>
-              We’re Help <br />
-              To Build Your <br />
+              We’re Help <br  className="none-425"/>
+              To Build Your <br className="none-425"/>
               Dream Project
             </h1>
 

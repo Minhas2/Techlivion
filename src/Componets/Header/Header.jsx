@@ -23,7 +23,9 @@ export default function Header() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
+            <div
+  className="collapse navbar-collapse "
+  id="navbarNav">
               <ul className="navbar-nav ms-auto align-items-center">
                 <li className="nav-item">
                   <Link className="nav-link text-white" to="/services">
@@ -53,7 +55,7 @@ export default function Header() {
                 <li className="gray pe-3 non-992">|</li>
               </ul>
               <div>
-                <button className="hire-btn">Hire Now</button>
+                <button className="hire-btn non-992">Hire Now</button>
               </div>
             </div>
           </div>

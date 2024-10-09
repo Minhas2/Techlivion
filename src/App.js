@@ -6,6 +6,7 @@ import Home from './Componets/Pages/Home';
 import Portfolio from './Componets/Pages/Portfolio';
 import Contact from './Componets/Pages/Contact';
 import Services from './Componets/Pages/Services';
+import About from './Componets/Pages/About';
 
 
 
@@ -15,11 +16,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Portfolio" element={<Portfolio/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/services" element={<Services/>} />
-        {/* <Route path="/about" element={<About />} /> */}
-
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="about" element={<About />} />
         {/* Add more routes as needed */}
       </Routes>
       <Footer />
