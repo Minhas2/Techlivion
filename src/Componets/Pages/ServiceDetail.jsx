@@ -227,8 +227,8 @@ export default function ServiceDetail() {
     },
     {
       id: 32,
-      image: "s1.png",
-      heading: "s11.jpeg",
+      image: "s8.jpeg",
+      heading: "Seo Audits",
       slug: "seo-audits",
       para: "Evaluate your website’s SEO performance with our detailed audits. We identify strengths and weaknesses, providing actionable insights to enhance your SEO strategy.",
     },

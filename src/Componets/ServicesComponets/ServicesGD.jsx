@@ -89,7 +89,7 @@ export default function ServicesGD() {
       icon: faSearch,
       services: [
         { name: "On-Page SEO", path: "/services/on-page-seo" },
-        { name: "Off-Page SEO", path: "/servicesoff-page-seo" },
+
         { name: "Technical SEO", path: "/services/technical-seo" },
         { name: "Keyword Research", path: "/services/keyword-research" },
         { name: "SEO Audits", path: "/services/seo-audits" },
