@@ -48,3 +48,63 @@
         display: none;
     }
 }
+
+
+
+
+
+
+/* new hamburger */
+
+
+/* Custom styles for the hamburger */
+.custom-toggler {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+  
+  .custom-hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .custom-hamburger::before,
+  .custom-hamburger::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .custom-hamburger::before {
+    top: -8px;
+  }
+  
+  .custom-hamburger::after {
+    top: 8px;
+  }
+  
+  /* Custom styles for when the hamburger is open */
+  .navbar-toggler.open .custom-hamburger {
+    transform: rotate(45deg);
+  }
+  
+  .navbar-toggler.open .custom-hamburger::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  
+  .navbar-toggler.open .custom-hamburger::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+  

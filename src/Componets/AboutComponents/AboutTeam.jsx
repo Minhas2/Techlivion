@@ -41,7 +41,7 @@ export default function AboutTeam() {
   };
 
   return (
-    <div className='Team-Back'>
+    <div className='Team-Back ' id='team'>
       <div className='container py-Team epilogue text-white'>
         <p className='mb-0'>OUR TEAM</p>
         <h1>Team of Designers <br /> and Developers</h1>

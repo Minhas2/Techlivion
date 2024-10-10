@@ -1,10 +1,18 @@
 import React from "react";
 import "./Footer.css";
-// Import FontAwesomeIcon and the specific brand icons you need
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faYoutube, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling effect
+    });
+  };
+
   return (
     <div className="bg-blk Rubik">
       <div className="container">
@@ -20,10 +28,19 @@ export default function Footer() {
 
           <div className="col-lg-3 col-md-6 col-sm-6 col-6 footer-link">
             <h4 className="footer-headlines mb-headline">Quick Link</h4>
-            <p>Home</p>
-            <p>Services</p>
-            <p>Portfolio</p>
-            <p>About</p>
+            {/* Call scrollToTop on link click */}
+            <Link className="no-underline" to="/" onClick={scrollToTop}>
+              <p>Home</p>
+            </Link>
+            <Link className="no-underline" to="/services" onClick={scrollToTop}>
+              <p>Services</p>
+            </Link>
+            <Link className="no-underline" to="/portfolio" onClick={scrollToTop}>
+              <p>Portfolio</p>
+            </Link>
+            <Link className="no-underline" to="/about" onClick={scrollToTop}>
+              <p>About</p>
+            </Link>
             <p>Team</p>
           </div>
 
@@ -38,10 +55,10 @@ export default function Footer() {
             <div className="d-flex text-white justify-content-between">
               {/* Add social media icons */}
               <FontAwesomeIcon icon={faFacebook} size="2x" />
-              <FontAwesomeIcon icon={faInstagram} size="2x"  />
-              <FontAwesomeIcon icon={faYoutube} size="2x"  />
-              <FontAwesomeIcon icon={faTwitter} size="2x"  />
-              <FontAwesomeIcon icon={faLinkedin} size="2x"  />
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+              <FontAwesomeIcon icon={faYoutube} size="2x" />
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </div>
           </div>
 

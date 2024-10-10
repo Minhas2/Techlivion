@@ -1,52 +1,71 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./Header.css"; // Import your CSS styles
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Header.css"; // Ensure to add styles for the custom hamburger
 
 export default function Header() {
+  // State to track the collapse status
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const navbarCollapseRef = useRef(null);
+
+  // Function to toggle the navbar
+  const toggleNavbar = () => {
+    setIsCollapsed(!isCollapsed); // Toggle collapse state
+  };
+
+  // Function to close the navbar when a link is clicked
+  const closeNavbar = () => {
+    if (!isCollapsed) {
+      setIsCollapsed(true); // Collapse the navbar when a link is clicked
+    }
+  };
+
   return (
     <div className="bg-blk">
       <div className="container">
         <nav className="navbar navbar-expand-lg py-3 Rubik">
           <div className="container-fluid">
             <Link className="navbar-brand text-white" to="/">
-              {/* Replace this with your logo */}
               <img src="../assets/Techlivion.png" alt="Logo" height="30" />
             </Link>
+
+            {/* Custom Hamburger Toggle */}
             <button
-              className="navbar-toggler"
+              className={`navbar-toggler custom-toggler ${isCollapsed ? "" : "open"}`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
+              onClick={toggleNavbar}
+              aria-expanded={!isCollapsed}
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              {/* Custom hamburger icon (you can style this in CSS) */}
+              <span className="custom-hamburger"></span>
             </button>
-            <div className="collapse navbar-collapse " id="navbarNav">
-              <ul className="navbar-nav ms-auto align-items-center">
+
+            <div className={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`} id="navbarNav" ref={navbarCollapseRef}>
+              <ul className="navbar-nav ms-auto align-items-lg-center align-items-start">
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/services">
+                  <Link className="nav-link text-white" to="/services" onClick={closeNavbar}>
                     Services
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/portfolio">
+                  <Link className="nav-link text-white" to="/portfolio" onClick={closeNavbar}>
                     Portfolio
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/about">
+                  <Link className="nav-link text-white" to="/about" onClick={closeNavbar}>
                     About
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/contact">
+                  <Link className="nav-link text-white" to="/contact" onClick={closeNavbar}>
                     Contact
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white">Team</Link>
+                  <Link className="nav-link text-white" to="/about" onClick={closeNavbar} >
+                    Team
+                  </Link>
                 </li>
                 <li className="gray pe-3 non-992">|</li>
               </ul>
