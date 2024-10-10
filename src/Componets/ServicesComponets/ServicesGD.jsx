@@ -14,6 +14,17 @@ import {
   faHeadset 
 } from '@fortawesome/free-solid-svg-icons';
 
+
+
+
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scrolling effect
+    });
+  };
+
 export default function ServicesGD() {
   const [openIndex, setOpenIndex] = useState(null); // Track which section is open
 
@@ -165,7 +176,7 @@ export default function ServicesGD() {
               <div className="mt-3 p-3 border-expand">
                 <div className="d-flex flex-wrap">
                   {section.services.map((service, serviceIndex) => (
-                    <Link to={service.path} className="border-tag mt-2 me-2 no-underline" key={serviceIndex}>
+                    <Link to={service.path} className="border-tag mt-2 me-2 no-underline" key={serviceIndex} onClick={scrollToTop}>
                       {service.name}
                     </Link>
                   ))}

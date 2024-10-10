@@ -112,4 +112,17 @@ margin-bottom: 31px;
     .slider-container {
         padding-bottom: 200px;
     }
+
+    .FAQ-Box h1 {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 31px;
+  }
+
+  .mb-65 {
+    margin-bottom: 30px;
+}
+
+
+
   }

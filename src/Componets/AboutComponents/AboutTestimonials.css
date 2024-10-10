@@ -128,14 +128,34 @@ text-align: start;
 
 }
 
+
+
+
+
+
 .slider-container .slick-track {
   position: relative;
   top: 0px;
-  left: 483px;
+  /* left: 483px; */
+  left: 33%;
 
 }
 
 }
+
+
+
+@media (max-width: 1024px) {
+  .slider-container .slick-track {
+    position: relative;
+    top: 0px;
+    left: 33%;
+}
+ 
+}
+ 
+
+
 
 
 
@@ -148,7 +168,11 @@ text-align: start;
   .slider-container {
     padding-bottom: 174px;
 }
-
+.slider-container .slick-track {
+  position: relative;
+  top: 0px;
+  left: 0%;
+}
   
   
   }
