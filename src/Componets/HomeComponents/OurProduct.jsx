@@ -58,7 +58,7 @@ export default function OurProduct() {
         Our Product <br />
         Development Process{" "}
       </h1>
-      <div className="row text-white">
+      <div className="row text-white pro-425">
         {products.map((product) => (
           <div className="col-lg-4 mt-3 p-4" key={product.id}>
             <div className="border-product p-product-box">

@@ -92,14 +92,14 @@ margin-bottom: 31px;
     }
 
     .py-Team h1 {
-        font-size: 40px;
-        font-weight: 800;
-        line-height: 45px;
-        letter-spacing: -1px;
-        text-align: left;
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 30px;
+      letter-spacing: -1px;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 50px;
+  }
 
     .test-intro h1 {
         font-size: 35px;

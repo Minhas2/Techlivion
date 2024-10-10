@@ -5,36 +5,43 @@ import "slick-carousel/slick/slick-theme.css";
 import "./AboutTestimonials.css"; // Your custom styles
 
 export default function AboutTestimonials() {
-  const settings = {
-    centerMode: true,
-    centerPadding: "0px",
-    slidesToShow: 3, // Show 3 slides by default
-    slidesToScroll: 1,
-    dots: true,
-    focusOnSelect: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        // For smaller screens (max-width 1024px)
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2, // Show 2 slides
-          slidesToScroll: 1,
-          centerPadding: "40px",
-        },
+const settings = {
+  centerMode: true,
+  centerPadding: "0px",
+  slidesToShow: 3, // Show 3 slides by default
+  slidesToScroll: 1,
+  dots: true,
+  focusOnSelect: true,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: "40px",
       },
-      {
-        // For mobile screens (max-width 768px)
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1, // Show only 1 slide
-          slidesToScroll: 1,
-          centerPadding: "10px",
-        },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "20px", // Reduce padding for mobile
       },
-    ],
-  };
+    },
+    {
+      breakpoint: 576, // For very small screens (e.g. phones)
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "10px",
+      },
+    },
+  ],
+};
+
 
   return (
     <div className="Testimonials-Back epilogue">
@@ -53,7 +60,7 @@ export default function AboutTestimonials() {
           {/* Testimonial 1 */}
           <div>
             <div className="border-testimonial d-flex p-3 flex-column">
-              <p className="text-start">⭐⭐⭐⭐⭐</p>
+              <p className="text-start star">⭐⭐⭐⭐⭐</p>
               <p className="text-start test-para">
                 A digital agency is a business you hire to outsource your
                 digital marketing efforts, instead of handling in-house. They
@@ -62,7 +69,7 @@ export default function AboutTestimonials() {
                 agency is a business you hire to outsource your digital
                 marketing efforts.
               </p>
-              <div className="d-flex flex-start align-items-center">
+              <div className="d-flex flex-start align-items-center center-425">
                 <img src="../assets/T2.png" alt="" className="testImage" />
                 <div className="d-flex flex-column ps-2">
                   <h1 className="text-header mb-0">Alan Martí</h1>
@@ -117,12 +124,12 @@ export default function AboutTestimonials() {
           </div>
 
           {/* Sample image (could replace with a new testimonial) */}
-          <div>
+          {/* <div>
             <img
               src="https://images.unsplash.com/photo-1558429121-3943585e2206?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
               alt="slide 4"
             />
-          </div>
+          </div> */}
         </Slider>
       </div>
     </div>

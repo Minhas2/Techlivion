@@ -137,3 +137,13 @@ height: 442.45px;
 }
 
 }
+
+
+@media (max-width: 425px) {
+.sub-btn {
+    padding: 10px 20px;
+}
+
+
+
+}

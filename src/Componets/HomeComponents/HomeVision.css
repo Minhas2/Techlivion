@@ -130,4 +130,11 @@ border-radius: 32px;
           
             }
         
-      
+@media (max-width: 425px) {
+
+    .V-topBox {
+        margin-bottom: 60px;
+    }
+                        }
+                    
+

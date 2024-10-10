@@ -63,7 +63,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link text-white" to="/about" onClick={closeNavbar} >
+                  <Link className="nav-link text-white" to="/about#team" onClick={closeNavbar} >
                     Team
                   </Link>
                 </li>
